@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome Photo Wall</title>
+    <meta name="description" content="Add your selfie to the wall!"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+
+
+
+
+
+
+
+  <body>
+
+
+    <div id="container">
+
+
+        <div id="worldContainer">
+        </div>
+
+        <!-- <div id="promptContainer">
+
+            <div id="promptLogoContainer">
+                <img id="promptLogoImg" src="images/logo_f2f2f2.png"></img>
+            </div>
+            <div id="promptTextContainer">
+                <div id="promptText">Use your phone to add a photo!</div>
+            </div>
+            
+        </div> -->
+
+    </div>
+
+
+
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="modules/utils/three.min.js"></script>
+    <script src="modules/utils/stats.min.js"></script>
+    <script src="modules/utils/OrbitControls.js"></script>
+
+    <script src="modules/core/imageTile.js"></script>
+    <script src="modules/core/imageTiling.js"></script>
+    <script src="modules/core/worldManager.js"></script>
+    <script src="modules/core/muralManager.js"></script>
+    <script src="modules/core/packManager.js"></script>
+    <script src="modules/core/serverManager.js"></script>
+    <script src="modules/core/brain.js"></script>
+    <script src="main.js"></script>    
+    
+
+
+
+    <script>
+      init();
+    </script>
+
+  </body>
+</html>

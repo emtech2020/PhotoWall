@@ -1,0 +1,9 @@
+{
+  "name": "photural",
+  "description": "photural",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "permissions": [
+          "idle"
+        ]
+}

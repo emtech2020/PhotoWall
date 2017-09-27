@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome Photo Wall!</title>
+    <!--<meta name="description" content="Use your phone to add a photo"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="mobileClient/styles.css">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+
+
+
+
+
+
+
+  <body>
+
+    <div class="layout-transparent mdl-layout mdl-js-layout">
+
+      <main id="main" class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+
+          <div id="container">
+
+            <div id="cameraContainer">
+              <div id="cameraVideoContainer">
+                <video id="cameraVideo"></video>
+              </div>
+              <div id="snapShotContainer">
+                <canvas id="cameraCanvas"></canvas>
+              </div>
+              <div id="errorTextContainer">
+                <span id="errorText">This browser does not support camera access</span>
+              </div>
+              <div id="mediaCaptureInputContainer">
+                <input id="mediaCaptureInput" type="file" accept="image/*" capture>
+              </div>
+            </div>
+
+
+            
+            <div id="touchPadContainer">
+            </div>
+          
+
+
+
+            <div id="snapShotReviewContainer">
+              <img id="snapShotReview">
+              <button id="rejectSnapShotButton" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                <i class="material-icons">clear</i>
+              </button>
+              <button id="acceptSnapShotButton" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                <i class="material-icons">done</i>
+              </button>
+            </div>
+
+
+
+            <div id="cameraControlsContainer">
+              <button id="takeSnapShotButton" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+                <i class="material-icons">camera_alt</i>
+              </button>
+              <button id="toggleVideoSourceButton" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+                <i id="toggleVideoSourceButtonIcon" class="material-icons">camera_rear</i>
+              </button>
+            </div>
+
+            
+
+            <div id="toast">
+              <p id="toastText">Photo uploaded!</p>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+        </div>
+      </main>
+
+    </div>
+
+
+
+
+
+
+
+
+<!--    <script src="/socket.io/socket.io.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>    
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+    <script src="mobileClient/modules/utils/three.min.js"></script>
+    <script src="mobileClient/modules/utils/stats.min.js"></script>
+    <script src="mobileClient/modules/utils/exif.js"></script>
+
+    <script src="mobileClient/modules/core/touchPadInterface.js"></script>
+    <script src="mobileClient/modules/core/cameraInterface.js"></script>
+    <script src="mobileClient/modules/core/serverManager.js"></script>
+    <script src="mobileClient/modules/core/brain.js"></script>
+    <script src="mobileClient/main.js"></script>
+
+
+
+    <script>
+      init();
+    </script>
+
+  </body>
+</html>
