@@ -1,16 +1,3 @@
-/*(function() {
-    var childProcess = require("child_process");
-    var oldSpawn = childProcess.spawn;
-    function mySpawn() {
-        console.log('spawn called');
-        console.log(arguments);
-        var result = oldSpawn.apply(this, arguments);
-        return result;
-    }
-    childProcess.spawn = mySpawn;
-})();*/
-
-
 /*
 main.js
 
@@ -368,12 +355,6 @@ function ServerManager(brain) {
 		app.use(bodyParser.urlencoded({extended: true}))
 		app.use(bodyParser.json())
 		app.use(express.static('public'))
-
-		app.get('/', (req, res) => {
-		  res.render('index.ejs', {});
-		})
-
-
 	}
 
 	// Serve up the favicon
@@ -436,37 +417,7 @@ function ServerManager(brain) {
 
 	// Create the https server to serve up the content
 	self.createHttpsServer = function() {
-		var https = require("https");
-		var fs = require("fs");
-		
-/*		var key_file = "pwdemo.org.key";
-		var cert_file = "pwdemo.org.crt";
-		var ca_file = "gd_bundle-g2-g1.crt";
-
-	 	var config = {
-			key: fs.readFileSync(key_file),
-		 	cert: fs.readFileSync(cert_file),
-		 	ca: fs.readFileSync(ca_file)
-		};
-
-		var server = https.createServer(config, app);*/
-
-		//const express = require('express')
-		/*const app = express()
-		const bodyParser = require('body-parser')
-
-		app.set('view engine', 'ejs')
-		app.use(bodyParser.urlencoded({extended: true}))
-		app.use(bodyParser.json())
-		app.use(express.static('public'))
-
-		app.get('/', (req, res) => {
-		  res.render('index.ejs', {});
-		})*/
-
 		var server = require('http').createServer(app)
-
-
 		return server;
 	}
 
